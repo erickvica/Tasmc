@@ -9,11 +9,17 @@
         android:id="@+id/app_bar_hotel"
         layout="@layout/app_bar_hotel" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/listHoteles"
-        android:layout_below="@id/app_bar_hotel"
+    <android.support.v7.widget.SwipeRefresh
+        android:id="@+id/swipeHoteles"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent">
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listHoteles"
+            android:layout_below="@id/app_bar_hotel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.v7.widget.SwipeRefresh>
 
 </RelativeLayout>
