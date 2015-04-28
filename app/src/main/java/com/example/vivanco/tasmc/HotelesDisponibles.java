@@ -1,6 +1,7 @@
 package com.example.vivanco.tasmc;
 
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.android.volley.toolbox.ImageLoader;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
@@ -17,13 +19,14 @@ import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
 import java.util.ArrayList;
 
 
-public class HotelesDisponibles extends ActionBarActivity implements View.OnClickListener {
+public class HotelesDisponibles extends ActionBarActivity implements View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
 
     private RecyclerView listHoteles;
     private ArrayList<Hotel> hoteles=new ArrayList<>();
     private ImageLoader imageLoader;
     private VolleySingleton volleySingleton;
     private AdaptadorHotelesDisponibles adaptadorHoteles;
+    private SwipeRefreshLayout mSwipeRefreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,8 @@ public class HotelesDisponibles extends ActionBarActivity implements View.OnClic
         listHoteles.setLayoutManager(new LinearLayoutManager(this));
         adaptadorHoteles=new AdaptadorHotelesDisponibles(this);
         listHoteles.setAdapter(adaptadorHoteles);
+        mSwipeRefreshLayout=(SwipeRefreshLayout)findViewById(R.id.swipeHoteles);
+       mSwipeRefreshLayout.setOnRefreshListener(this);
 
     }
 
@@ -101,5 +106,10 @@ public class HotelesDisponibles extends ActionBarActivity implements View.OnClic
     @Override
     public void onClick(View v) {
         
+    }
+
+    @Override
+    public void onRefresh() {
+
     }
 }
