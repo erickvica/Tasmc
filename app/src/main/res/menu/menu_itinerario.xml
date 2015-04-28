@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.vivanco.tasmc.Itinerario">
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/share"
+        android:showAsAction="always"
+        android:title="Compartir" />
+
+</menu>

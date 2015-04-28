@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.vivanco.tasmc" >
+
+    <permission
+        android:name="com.example.vivanco.tasmc.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.example.vivanco.tasmc.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--
+         The following two permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/plane"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="com.google.android.maps" />
+
+        <activity
+            android:name=".MainActivity"
+            android:icon="@drawable/plane" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SubActivity"
+            android:label="@string/title_activity_sub" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Hoteles"
+            android:label="@string/title_activity_hoteles" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Vuelos"
+            android:label="@string/title_activity_vuelos" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".InfoAicm"
+            android:label="@string/title_activity_info_aicm" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".ListEquipaje"
+            android:label="@string/title_activity_list_equipaje" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Itinerario"
+            android:label="@string/title_activity_itinerario" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".RutaAicm"
+            android:label="@string/title_activity_ruta_aicm" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Ubicate"
+            android:label="@string/title_activity_ubicate"
+            android:screenOrientation="nosensor" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".InfoVuelo"
+            android:label="@string/title_activity_info_vuelo" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBSMD70mroJbWHv_Svaag6XUV1mmlxGD1U" />
+
+        <activity
+            android:name=".Equipaje"
+            android:label="@string/title_activity_equipaje" />
+        <activity
+            android:name=".Mapa"
+            android:label="@string/title_activity_mapa" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InfoAicm" />
+        </activity>
+        <activity
+            android:name=".ListServicios"
+            android:label="@string/title_activity_list_servicios" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InfoAicm" />
+        </activity>
+        <activity
+            android:name=".NuevoItinerario"
+            android:label="@string/title_activity_nuevo_itinerario" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Itinerario" />
+        </activity>
+        <activity
+            android:name=".NuevoEquipaje"
+            android:label="@string/title_activity_nuevo_equipaje" />
+        <activity
+            android:name=".Configuracion"
+            android:label="@string/title_activity_configuracion" />
+        <activity
+            android:name=".HotelesDisponibles"
+            android:label="@string/title_activity_hoteles_disponibles" >
+        </activity>
+        <activity
+            android:name=".PA"
+            android:label="@string/title_activity_p" >
+        </activity>
+        <activity
+            android:name=".PB"
+            android:label="@string/title_activity_pb" >
+        </activity>
+        <activity
+            android:name=".VuelosDisponibles"
+            android:label="@string/title_activity_vuelos_disponibles" >
+        </activity>
+    </application>
+
+</manifest>
