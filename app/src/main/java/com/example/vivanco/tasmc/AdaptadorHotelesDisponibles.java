@@ -21,7 +21,6 @@ import java.util.List;
  */
 public class AdaptadorHotelesDisponibles extends RecyclerView.Adapter<AdaptadorHotelesDisponibles.MyViewHolder> {
     private LayoutInflater inflater;
-    List<Informacion> datos = Collections.emptyList();
     private Context context;
     //Lista de hoteles
     private ArrayList<Hotel> listHoteles = new ArrayList<>();

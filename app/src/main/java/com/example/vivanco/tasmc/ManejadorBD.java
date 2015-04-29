@@ -25,7 +25,7 @@ public class ManejadorBD extends SQLiteOpenHelper {
 
         //Creacion tabla vuelo
         db.execSQL("CREATE TABLE vuelo ("
-                + "id INTEGER PRIMARY KEY AUTOINCREMENT, " + "categoria TEXT,"
+                + "id INTEGER PRIMARY KEY AUTOINCREMENT, " + "categoria TEXT,"+ "aerolinea TEXT,"+ "vuelo TEXT,"
                 + "fechaSalida TEXT," + " fechaLlegada TEXT," + "origen TEXT,"
                 + "destino INTEGER," + "estado TEXT," + "horaSalida TEXT,"
                 + "horaLlegada TEXT," + "terminal TEXT," + "puerta TEXT)");
@@ -69,8 +69,8 @@ public class ManejadorBD extends SQLiteOpenHelper {
 
     public void guardarVuelo(Vuelo vuelo) {
         db = getWritableDatabase();
-        db.execSQL("INSERT INTO vuelo VALUES ( null,'" + vuelo.getCategoria() + "','"
-                + vuelo.getFechaSalida() + "','" + vuelo.getFechaLlegada() + "','"
+        db.execSQL("INSERT INTO vuelo VALUES ( null,'" + vuelo.getCategoria() + "','" + vuelo.getAerolinea() + "','"
+                + vuelo.getVuelo() + "','"+ vuelo.getFechaSalida() + "','" + vuelo.getFechaLlegada() + "','"
                 + vuelo.getOrigen() + "','" + vuelo.getDestino() + "','" + vuelo.getEstado() + "','"
                 + vuelo.getHoraSalida() + "','" + vuelo.getHoraLlegada() + "','" + vuelo.getTerminal() + "','"
                 + vuelo.getPuerta() + "')");

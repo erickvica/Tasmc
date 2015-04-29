@@ -30,6 +30,13 @@
         <item>Planta Alta</item>
         <item>Planta Baja</item>
     </string-array>
+    <string-array name="tabv">
+        <item>Llegadas Nacionales</item>
+        <item>Llegadas Internacionales</item>
+        <item>Salidas Nacionales</item>
+        <item>Salidas Internacionales</item>
+    </string-array>
+
     <string name="title_activity_list_actividades">ListActividades</string>
     <string name="title_activity_mapa">Mapa</string>
     <string name="title_activity_list_servicios">Servicios</string>
