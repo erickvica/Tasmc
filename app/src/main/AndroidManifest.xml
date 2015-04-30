@@ -151,6 +151,9 @@
         <activity
             android:name=".HotelesDisponibles"
             android:label="@string/title_activity_hoteles_disponibles" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Hoteles" />
         </activity>
         <activity
             android:name=".PA"
@@ -163,6 +166,16 @@
         <activity
             android:name=".VuelosDisponibles"
             android:label="@string/title_activity_vuelos_disponibles" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Vuelos" />
+        </activity>
+        <activity
+            android:name=".InfoMiVuelo"
+            android:label="@string/title_activity_info_mi_vuelo" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InfoVuelo" />
         </activity>
     </application>
 

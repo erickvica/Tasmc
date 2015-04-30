@@ -1,5 +1,6 @@
 package com.example.vivanco.tasmc;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -112,4 +113,9 @@ public class InfoVuelo extends ActionBarActivity {
         }
     }
 
+    //Funcion para buscar por numero de vuelo
+    public void buscar() {
+
+
+    }
 }

@@ -634,6 +634,7 @@
     <string name="title_activity_p">PA</string>
     <string name="title_activity_pb">PB</string>
     <string name="title_activity_vuelos_disponibles">VuelosDisponibles</string>
+    <string name="title_activity_info_mi_vuelo">InfoMiVuelo</string>
 
 </resources>
 

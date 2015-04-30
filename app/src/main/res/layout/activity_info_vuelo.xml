@@ -9,6 +9,18 @@
         android:id="@+id/app_bar_infv"
         layout="@layout/app_bar_infv" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/vuelo"
+        android:hint=" Numero de vuelo(LAN2629)"
+        android:layout_below="@+id/app_bar_infv"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:drawableLeft="@drawable/lupa" />
+
 
     <Button
         android:layout_width="match_parent"
@@ -16,8 +28,7 @@
         android:text="Buscar mi vuelo"
         android:id="@+id/buscar"
         android:background="@color/acentuadoInfoV"
-        android:onClick="lanzar"
-        android:layout_marginTop="44dp"
+        android:onClick="buscar"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
@@ -30,7 +41,7 @@
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 
 </LinearLayout>
 
