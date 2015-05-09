@@ -15,7 +15,6 @@ public class Ida extends Fragment {
     String[] opclase = new String[]{"Económico", "Económico Premium", "Business", "Primera"};
     Spinner pasajeros;
     String[] opasa = new String[]{"1 Pasajero", "2 Pasajeros", "3 Pasajeros", "4 Pasajeros", "5 Pasajeros"};
-    EditText fechaIda;
 
     public Ida() {
         // Required empty public constructor

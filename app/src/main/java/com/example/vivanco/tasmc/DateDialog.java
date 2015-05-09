@@ -18,12 +18,18 @@ public class DateDialog extends DialogFragment implements DatePickerDialog.OnDat
     EditText fechain;
     EditText fechaout;
     EditText fechaida;
+    EditText fechaI;
+    EditText fechaV;
+
 
 
     public DateDialog(View view){
         fechain=(EditText)view;
         fechaout=(EditText)view;
         fechaida=(EditText)view;
+        fechaI=(EditText)view;
+        fechaV=(EditText)view;
+
     }
 
     public Dialog onCreateDialog(Bundle savedInstanceState){
@@ -41,6 +47,9 @@ public class DateDialog extends DialogFragment implements DatePickerDialog.OnDat
         fechain.setText(fecha);
         fechaout.setText(fecha);
         fechaida.setText(fecha);
+        fechaI.setText(fecha);
+        fechaV.setText(fecha);
+
 
     }
 }

@@ -118,6 +118,26 @@
             android:layout_alignStart="@+id/editText2"
             android:layout_alignTop="@+id/imageView9" />
 
+        <EditText
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/fechaI"
+            android:hint="Fecha Ida"
+            android:layout_above="@+id/imageView8"
+            android:layout_alignStart="@+id/editText2" />
+
+        <EditText
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/fechaV"
+            android:hint="Fecha Vuelta"
+            android:layout_alignBottom="@+id/fechaI"
+            android:layout_alignEnd="@+id/editText2" />
+
     </RelativeLayout>
 
 
