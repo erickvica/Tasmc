@@ -40,11 +40,6 @@
         <activity
             android:name=".MainActivity"
             android:icon="@drawable/plane" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".SubActivity"
@@ -146,8 +141,21 @@
             android:name=".NuevoEquipaje"
             android:label="@string/title_activity_nuevo_equipaje" />
         <activity
+            android:name=".Reconfigura"
+            android:label="@string/title_activity_reconfigura" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
             android:name=".Configuracion"
-            android:label="@string/title_activity_configuracion" />
+            android:label="@string/title_activity_configuracion">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".HotelesDisponibles"
             android:label="@string/title_activity_hoteles_disponibles" >

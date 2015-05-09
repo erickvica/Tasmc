@@ -17,8 +17,11 @@ public class Vuelo {
     private String horaLlegada;
     private String terminal;
     private String puerta;
+    private String tiempo;
+    private String escalas;
+    private String precio;
 
-    public Vuelo(int id, String categoria, String aerolinea, String vuelo, String fechaSalida, String fechaLlegada, String origen, String destino, String estado, String horaSalida, String horaLlegada, String terminal, String puerta) {
+    public Vuelo(int id, String categoria, String aerolinea, String vuelo, String fechaSalida, String fechaLlegada, String origen, String destino, String estado, String horaSalida, String horaLlegada, String terminal, String puerta, String tiempo, String escalas, String precio) {
         this.id = id;
         this.categoria = categoria;
         this.aerolinea = aerolinea;
@@ -32,6 +35,9 @@ public class Vuelo {
         this.horaLlegada = horaLlegada;
         this.terminal = terminal;
         this.puerta = puerta;
+        this.tiempo = tiempo;
+        this.escalas = escalas;
+        this.precio = precio;
     }
 
     public int getId() {
@@ -138,6 +144,30 @@ public class Vuelo {
         this.puerta = puerta;
     }
 
+    public String getTiempo() {
+        return tiempo;
+    }
+
+    public void setTiempo(String tiempo) {
+        this.tiempo = tiempo;
+    }
+
+    public String getEscalas() {
+        return escalas;
+    }
+
+    public void setEscalas(String escalas) {
+        this.escalas = escalas;
+    }
+
+    public String getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(String precio) {
+        this.precio = precio;
+    }
+
     @Override
     public String toString() {
         return "Vuelo{" +
@@ -154,6 +184,9 @@ public class Vuelo {
                 ", horaLlegada='" + horaLlegada + '\'' +
                 ", terminal='" + terminal + '\'' +
                 ", puerta='" + puerta + '\'' +
+                ", tiempo='" + tiempo + '\'' +
+                ", escalas='" + escalas + '\'' +
+                ", precio='" + precio + '\'' +
                 '}';
     }
 }
