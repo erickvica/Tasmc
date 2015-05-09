@@ -5,17 +5,11 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
-
-import java.util.Date;
 
 
 public class Hoteles extends ActionBarActivity implements View.OnClickListener {
@@ -59,28 +53,28 @@ public class Hoteles extends ActionBarActivity implements View.OnClickListener {
 
     }
 
-    public void onStart(){
+    public void onStart() {
         super.onStart();
-        EditText fechain=(EditText)findViewById(R.id.fechain);
-        EditText fechaout=(EditText)findViewById(R.id.fechaout);
+        EditText fechain = (EditText) findViewById(R.id.fechain);
+        EditText fechaout = (EditText) findViewById(R.id.fechaout);
 
         fechain.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus){
-                    DateDialog dialog=new DateDialog(v);
-                    FragmentTransaction ft=getFragmentManager().beginTransaction();
-                    dialog.show(ft,"DatePicker");
+                if (hasFocus) {
+                    DateDialog dialog = new DateDialog(v);
+                    FragmentTransaction ft = getFragmentManager().beginTransaction();
+                    dialog.show(ft, "DatePicker");
                 }
             }
         });
         fechaout.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus){
-                    DateDialog dialog=new DateDialog(v);
-                    FragmentTransaction ft=getFragmentManager().beginTransaction();
-                    dialog.show(ft,"DatePicker");
+                if (hasFocus) {
+                    DateDialog dialog = new DateDialog(v);
+                    FragmentTransaction ft = getFragmentManager().beginTransaction();
+                    dialog.show(ft, "DatePicker");
                 }
             }
         });
