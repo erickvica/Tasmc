@@ -10,10 +10,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class Ida_Vuelta extends Fragment {
-    double noPas;
-    TextView pasajeros;
     Spinner clases;
     String[] opclase = new String[]{"Económico", "Económico Premium", "Business", "Primera"};
+    Spinner pasajeros;
+    String[] opasa = new String[]{"1 Pasajero", "2 Pasajeros", "3 Pasajeros", "4 Pasajeros","5 Pasajeros"};
+
 
     public Ida_Vuelta() {
         // Required empty public constructor
@@ -28,6 +29,12 @@ public class Ida_Vuelta extends Fragment {
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, opclase);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         clases.setAdapter(dataAdapter);
+
+        pasajeros = (Spinner) rootView.findViewById(R.id.pasajeros);
+        ArrayAdapter<String> dataAdapter1 = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, opasa);
+        dataAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        pasajeros.setAdapter(dataAdapter1);
+
         return rootView;
 
     }
